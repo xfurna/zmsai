@@ -1,10 +1,11 @@
 from . import utils
 from . import readData
-from . import zmsParser.main as main
+from . import zmsParser
 from . import base
-name = 'zms-ai'
-__version__ = '0.0.1'
+
+name = "zms-ai"
+__version__ = "0.0.1"
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    zmsParser.main()
