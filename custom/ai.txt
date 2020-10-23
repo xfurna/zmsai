@@ -1,0 +1,70 @@
+Movies have been portraying AI in some or the other forms for decades. Regardless of how stunning and fascinating they may look, in order to make their movies entertaining, their makers reflect various narratives about AI that are shaping our perception of the future of human civilisation. Some represent them as evil, so much so that it is believed that considering the pace of advancement in AI and machine learning technology, one day a true AI would be made that would exceed human intelligence. In some sources, that moment is referred to as the singularity. It is noteworthy that just being super-intelligent wouldn’t make the AI evil as such. Irrespective of different viewpoints of different people about the ‘free will’, I believe if that super-intelligent AI attains the free will, then it would be its call about what it would do. Because such AI would be self-reliable while at the same time, it would be able to completely look through anybody; as in, it would be able to analyse our genetic code in a way never done before. From that, it would be able to deduce every weakness and strength of that person. Nonetheless, nothing of this is happening anytime soon.
+
+In some movies, AI has been depicted as the solution of all human sufferings. Not only would it replace human non-creative/non-governing work-force hence leaving humans to do more important jobs, supposedly, for making the world a better place, but also it would pave the way for the development of the cure of all the diseases on the face of the earth (including mortality). We can see AI is revolutionising the biotechnology industry already. Future is exhilarating to consider!
+Computational Rationality
+
+When we talk about AI, we want to escalate the idea to the subject of computational rationality. That is, in essence, the ability of an agent (an artificially intelligent entity) to accomplish a goal with maximum returns. To accomplish a task in such a manner, AI requires to have a sense of sensibility, reasonability and sentience in decision making. Having said that, when we talk about decision making in computational rationality, we are interested in what decision is made rather than how the AI came up with a particular decision. This is because there can be multiple decision-making strategies. It is the decision that decides the reliability of a particular strategy and not the other way around. Also, a machine always has some computational and hardware related limitations due to which a machine might not necessarily tend to find an optimal solution. Finding an optimal solution is another layer of complexity to it.
+Brain and AI
+
+On many occasions, AI is compared with the brain or rather the architecture of the brain. Engineers of an AI tend to take inspiration from the brain while making one. But beyond a certain point, it is deemed a failure to understand the intricacy that a brain is. Yes, some concepts like that of neural networks and perceptrons were inspired by how the brain works but as a brain is not as modular as some software, it is implausible to reverse engineer it. On top of that, it is not the brain but how it thinks is what gives it intelligence. That’s why it is said about them that-
+
+    “Brains are to intelligence what wings are to flight”
+
+As far as it is known, things that bring the brain its intelligence are- first, memory- the ability to store and recall information and second, simulation- the ability to imagine what would happen if different decisions were made.
+Risks of AI
+
+As discussed earlier, some movies represent the good things that could be possible because of AI while some talks about the bad aspects of AI. The ones which depict bad aspects of AI go about that in two ways- either project a super-intelligent AI overpowering humans and go in a similar line, or portray a ‘machine will be machine’ narrative by showing what may go wrong because of non-empathetic behaviours of AI. That brings us to the challenges and risks associated with AI development. Some of the prominent risks of AI include privacy violation, deepfake, algorithmic bias due to improper data generation, wealth inequality, etc.
+Formulation
+
+The first principle while building an AI is to model the problem into something which can be efficiently processed by a machine. This is done by looking at the problem through the lens of mathematics from various perspectives to come up with the one which can uphold desired standards in results while being able to be operated in a machine. But before you go and model your next problem for AI, consider this catch here- it is not necessary to come up with a different approach for every other problem. There are general AI techniques that can be used in a variety of problems. Learning to recognise when and how a new problem can be solved by an existing technique is what this course is all about.
+
+Having discussed the concept of computational rationality, we are now ready to put the definition of AI out there. AI s a study of computationally rational agents. Where any artificially intelligent entity can be called as an agent. The agent would perceive the surrounding and act upon it intelligently. In some sense, we can say that the agent ‘plans’ the way out in the environment in order to accomplish a goal which gives it the maximum ‘utility’. That plan depends on the strategy it takes and the surrounding they are supposed to act upon. In addition to that, to come up with an effective plan, the agent needs to have a memory (as discussed while comparing the brain with AI). There are several types of agent classified based on how they process their surroundings.
+Reflex Agents
+
+First is the reflex agent- as the name suggests, such agents act on reflexes. They don’t do calculations before making the decisions and acts merely based on its current perception of the environment. Since it does not do calculations for decision making, there is no need for percept history in a reflex agent. It might seem confusing how the agent makes decisions without calculations. The catch is, the environment in which such an agent is implied should be predictable and the agent should have complete knowledge about the environment at all times. In technical terms, such environments are called ‘fully observable’ environments. Examples of such environments could be a chessboard (where an exact location of each piece on the board is known to the agent at all times). Opposite to that is ‘partially observable’ environment like a driveway where anything can happen without prior knowledge of the event. Such environments are unpredictable. Now a reflex agent in a fully observable environment makes decisions based on the if-else rule. For example, a reflex agent meant to switch on the AC if the temperature goes above 40 degrees. In this example, the agent has a clear cut idea about what to do as the relevant environment is fully observable. Second is the planning agent- these are the agents that plan their way beforehand. The planning (basically, decision making) is done considering the respective consequences of the actions. Based on the objective a plan is calculated beforehand rather than acting as the situation comes.
+Planning Agents
+
+Now the whole exercise of planning a solution could yield either an optimal solution or a complete solution. The optimal solution is the solution to the lowest cost and maximum utility. While a complete solution is a solution which just fulfils the goal. From this, it can be inferred that an optimal solution is a complete solution but not all complete solutions are optimal solutions. A planning agent tries to come up with an optimal solution. It considers as many possibilities as it can take while making the decision. Of course, there would always be computational or hardware limitations which would pose the effectiveness of the decision making strategy followed by the agent to come up with a plan.
+Search Problem in AI
+
+that One classic AI problem is the search problem. A search problem has several components.
+
+    State-space: It depicts any one of the possible ‘states’ of our system. A state of a system (or space) is defined as its condition at a given moment of time, which can be completely narrated by all the components of that system (or space).
+    Successor function: Successor function, that update our state in a state-space once a decision is made followed by related actions.
+    Start state: It is the state space from which our agent starts computing for achieving the goal with maximum utility.
+    Goal test: It is the final state space which the agent worked for. Goal tests can be more than one. Search problems are modelled in a way that the agent doesn’t really search the goal test. We make our agent look for a path to the goal test.
+
+Modelling a Problem in AI
+
+We briefly discussed the importance of modelling the problem previously. While modelling a search problem we try to imitate the environment which the agent is supposed to be working in. This imitation is an approximation of the actual world needed to be put in place so that machines can work on it as it does.
+
+There is some terminology that goes about modelling the problem for AI. State-space, as defined previously, has two components- world state and search state.
+
+World state contains every last detail of the environment while the search state contains the details like states, possible action, successor function and goal test. These details are required for planning. One may notice that the objective state of the AI is always referred to as the goal test and not the goal state. This is because depending on the problem, state-space changes. For example, if the problem is to search a path which leads to a goal state then states would be (x,y) coordinates. While if the objective is to pick up the maximum number of dots ten the states would be [(x,y), dot boolean] where dot boolean stores information about the presence of a dot at (x,y).
+Search Problem State-space Representation
+
+On observing carefully, it can be easily inferred that in a search problem, our state-space is transitioning from the original state to one of the possible subsequent states so on and so forth. These transitions in state-spaces can be represented as a tree or a graph. And trees and graphs being so explored data structures, we can exploit essentially any information about which path to take and which not. Although, graphs and trees of search problems differ in many senses. Some facts about state-space transition graphs-
+
+    Each state occurs only once.
+    Nodes are world configurations.
+    Arcs represent successors (the result of an action).
+    Goal test represents the set of goal nodes.
+    We don’t store the whole graph in memory.
+
+Some facts about state-transition trees-
+
+    Does not really contain every state of the search space.
+    It depicts the possible paths that our agent can take while searching for the path to the goal.
+    A tree is more about the paths an agent can take than the states an agent can be in.
+    Children of each state in a tree corresponds to the successor state.
+    For the most problem, we can never actually build a complete tree as we would have reached the goal before only.
+    If we build the complete tree, we would end up with all the possible paths that can lead the agent to the goal test.
+    If there’s a cycle in the graph then the tree will become infinite. Because of this, we need to put some constraints so that we don’t get stuck in a loop.
+    For the representation of the tree, we have used the first-child-next-sibling tree (a tree which can have any number of nodes). The key property of this data structure is that tracing back from child to parent is not possible.
+
+The Quest!
+
+How we explore the states in order to make a tree or graph depends on what strategy we are using. Here strategy refers to any graph algorithms like DFS, BFS, UCS, etc. As mentioned above, if there are….
+
+This blog post is the first in a long series (I’m positively commited this time XD). In the following sequel, I’m going to do an in-depth analysis of various search techniques (It’s going to have some graphics too!) or should I say, ‘The Quest’… in any case, stand by!
+
