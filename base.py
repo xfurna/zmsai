@@ -1,7 +1,8 @@
 from utils import countFiles
 
 path = "./custom"
-numberTopics = countFiles(DIR=path)
+numberTopics, docs = countFiles(DIR=path)
+nWords=5
 
 helpTask = (
     "Provide task to perform [default : 'run'] [values : 'run', 'delete', display]"
@@ -12,4 +13,13 @@ helpTopics = (
     + str(numberTopics)
     + "]"
 )
+helpnWords = (
+    "How many words per topic/doc do you want to display? [with : 'display'] [default : "
+    + str(nWords)
+    + "]"
+)
 helpPath = "Provide directory of text files. [with : 'run'] [default : '" + path + "']"
+
+run = "[Running the model] it may take a while. Hang tight!"
+choice = "[`meta.zsm` is empty. Should I 'run' first?] y/n\n"
+delete = "[Deleting `meta.zms`]"

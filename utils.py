@@ -4,6 +4,32 @@ def series_to_list(obj):
 
 def countFiles(DIR):
     from os import listdir
+    lsdir = listdir(DIR)
+    count = len(lsdir)
+    return count, lsdir
 
-    count = len([name for name in listdir(DIR)])
-    return count
+def print_topics(model, vectorizer, nWords):
+    print("=======================")
+    print("TOPIC-WORD DISTRIBUTION")
+    print("=======================")
+    words = vectorizer.get_feature_names()
+    for topic_idx, topic in enumerate(model.components_):
+        print("Topic %d:\t" % (topic_idx+1), " | ".join([words[i]
+                        for i in topic.argsort()[:-nWords-1:-1]]))
+    print("\n")
+
+
+def print_list(dct, message):
+    print(message)
+    print("---------------------")
+    for i in dct:
+        jstr=''
+        nPad=15
+        ls=[' ']*(nPad-len(i[0]))
+        pad=jstr.join(ls)
+        print(i[0],pad,i[1])
+
+def padding(size, symb='='):      
+    jstr = "" 
+    ls = [symb]*size    
+    print(jstr.join(ls)) 
