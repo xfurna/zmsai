@@ -1,0 +1,31 @@
+attrs==20.2.0
+  - pytest==6.1.1 [requires: attrs>=17.4.0]
+iniconfig==1.1.1
+  - pytest==6.1.1 [requires: iniconfig]
+joblib==0.17.0
+  - scikit-learn==0.23.2 [requires: joblib>=0.11]
+    - sklearn==0.0 [requires: scikit-learn]
+numpy==1.19.2
+  - scikit-learn==0.23.2 [requires: numpy>=1.13.3]
+    - sklearn==0.0 [requires: scikit-learn]
+  - scipy==1.5.3 [requires: numpy>=1.14.5]
+    - scikit-learn==0.23.2 [requires: scipy>=0.19.1]
+      - sklearn==0.0 [requires: scikit-learn]
+pip==20.1.1
+pluggy==0.13.1
+  - pytest==6.1.1 [requires: pluggy>=0.12,<1.0]
+py==1.9.0
+  - pytest==6.1.1 [requires: py>=1.8.2]
+pyparsing==2.4.7
+  - packaging==20.4 [requires: pyparsing>=2.0.2]
+    - pytest==6.1.1 [requires: packaging]
+setuptools==46.4.0
+six==1.15.0
+  - packaging==20.4 [requires: six]
+    - pytest==6.1.1 [requires: packaging]
+threadpoolctl==2.1.0
+  - scikit-learn==0.23.2 [requires: threadpoolctl>=2.0.0]
+    - sklearn==0.0 [requires: scikit-learn]
+toml==0.10.1
+  - pytest==6.1.1 [requires: toml]
+wheel==0.34.2

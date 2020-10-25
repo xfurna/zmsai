@@ -1,0 +1,16 @@
+usage: zmsai [-h] [--path [PATH]] [--topics [TOPICS]] [--nwords [NWORDS]] [--distro [DISTRO]] task
+
+positional arguments:
+  task                  Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display']
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --path [PATH], -p [PATH]
+                        Provide directory of text files. [with : 'run'] [default : './custom']
+  --topics [TOPICS], -t [TOPICS]
+                        Provide directory of text files. [with : 'run'] [default : 4]
+  --nwords [NWORDS], -w [NWORDS]
+                        How many words per topic/doc do you want to display? [with : 'display'] [default : 5]
+  --distro [DISTRO], -d [DISTRO]
+                        What distributions do you want to display? [with : 'display'] [default : all] [values : 'dt', 'tw', 'dw', 'voc']
+                        
