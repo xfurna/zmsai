@@ -1,11 +1,10 @@
-import warnings
-
-warnings.simplefilter("ignore", DeprecationWarning)
 from readData import read_txt
 from utils import print_topics
 from utils import print_list
 from utils import padding
 
+import warnings
+warnings.simplefilter("ignore", DeprecationWarning)
 
 class heuristics:
     def __init__(self, path, numberTopics):

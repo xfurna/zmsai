@@ -8,6 +8,8 @@ import pickle as pkl
 
 import os
 
+import warnings
+warnings.filterwarnings("ignore")
 
 def main():
     args = argparse.ArgumentParser()
@@ -55,11 +57,11 @@ def main():
             distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
         elif pargs.distro == 'voc':
             distributions.get_vocabulary(base.docs, int(pargs.nwords))
-        
-        # distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
-        # distributions.get_vocabulary(base.docs, int(pargs.nwords))
-        # distributions.get_doc_topic_distrib(base.docs)
-        # distributions.get_topic_word_distrib(int(pargs.nwords))
+        elif pargs.distro == 'all':
+            distributions.get_doc_topic_distrib(base.docs)
+            distributions.get_topic_word_distrib(int(pargs.nwords))
+            distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
+            distributions.get_vocabulary(base.docs, int(pargs.nwords))
         
         pass
 
