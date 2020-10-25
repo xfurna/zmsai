@@ -2,10 +2,10 @@ from utils import countFiles
 
 path = "./custom"
 numberTopics, docs = countFiles(DIR=path)
-nWords=5
-
+nWords = 5
+defaultDistro = "all"
 helpTask = (
-    "Provide task to perform [default : 'run'] [values : 'run', 'delete', display]"
+    "Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display']"
 )
 
 helpTopics = (
@@ -17,6 +17,11 @@ helpnWords = (
     "How many words per topic/doc do you want to display? [with : 'display'] [default : "
     + str(nWords)
     + "]"
+)
+helpDistro = (
+    "What distributions do you want to display? [with : 'display'] [default : "
+    + defaultDistro
+    + "] [values : 'dt', 'tw', 'dw', 'voc']"
 )
 helpPath = "Provide directory of text files. [with : 'run'] [default : '" + path + "']"
 
