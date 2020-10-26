@@ -66,17 +66,13 @@ class heuristics:
 
         words = self.vectorizer.get_feature_names()
         total_counts = npz(len(words))
-        for i, t in enumerate(self.vector):
-
-            padding(len("* " + docs[i]), "-")
-            print("*", docs[i])
-            padding(len("* " + docs[i]), "-")
-
-            total_counts = t.toarray()[0]
-            count_dict = zip(words, total_counts)
-            count_dict = sorted(count_dict, key=lambda x: x[1], reverse=True)[0:nWords]
-            print_list(count_dict, message)
-            print("\n")
+        for t in self.vector:
+            total_counts+=t.toarray()[0]
+        
+        count_dict = (zip(words, total_counts))
+        count_dict = sorted(count_dict, key=lambda x:x[1], reverse=True)[0:nWords]
+        print_list(count_dict, message)
+        print("\n")
         return self.vectorizer.vocabulary_
 
     def get_feature_space(self, data):

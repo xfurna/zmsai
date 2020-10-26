@@ -79,6 +79,9 @@ def main():
         USAGE = open("MAN.txt",'r')
         print(USAGE.read())
         pass
-
+    
+    else:
+        print("[Invalid argument]")
+        pass
 if __name__ == "__main__":
     main()
