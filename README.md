@@ -83,3 +83,15 @@ pipenv run python3 zmsai display --distro dt
 # display vocabulary
 pipenv run python3 zmsai display -d vocab
 ```
+
+## ASCIINEMA
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
+</head>
+<body>
+  <asciinema-player src="/367912.cast" cols="211" rows="58"></asciinema-player>
+  ...
+  <script src="/asciinema-player.js"></script>
+</body>
+</html>
