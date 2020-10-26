@@ -5,11 +5,11 @@ numberTopics, docs = countFiles(DIR=path)
 nWords = 5
 defaultDistro = "all"
 helpTask = (
-    "Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display']"
+    "Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man']"
 )
 
 helpTopics = (
-    "Provide directory of text files. [with : 'run'] [default : "
+    "How many topics do you expect? [with : 'run'] [default : "
     + str(numberTopics)
     + "]"
 )

@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 
 def main():
     args = argparse.ArgumentParser()
-    args.add_argument("task", help=base.helpTask)
+    args.add_argument("task", nargs="?", default='run', help=base.helpTask)
     args.add_argument("--path", "-p", nargs="?", default=base.path, help=base.helpPath)
     args.add_argument(
         "--topics", "-t", nargs="?", default=base.numberTopics, help=base.helpTopics
@@ -29,7 +29,8 @@ def main():
 
     if pargs.task == "run":
         print(base.run)
-        os.remove("meta.zms")
+        if os.path.exists("meta.zms"):
+            os.remove("meta.zms")
         distributions = heuristics(path=pargs.path, numberTopics=pargs.topics)
         distributions.save()
         pass
@@ -74,6 +75,10 @@ def main():
         print(base.delete, size(obj) / 1024, "kb freed")
         pass
 
+    elif pargs.task == "man":
+        USAGE = open("MAN.txt",'r')
+        print(USAGE.read())
+        pass
 
 if __name__ == "__main__":
     main()
