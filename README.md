@@ -87,11 +87,11 @@ pipenv run python3 zmsai display -d vocab
 ## ASCIINEMA
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
+  <link rel="stylesheet" type="text/css" href="https://asciinema.org/dist/player/v2.4.1/asciinema-player.css" />
 </head>
 <body>
   <asciinema-player src="/367912.cast" cols="211" rows="58"></asciinema-player>
   ...
-  <script src="/asciinema-player.js"></script>
+  <script src="https://asciinema.org/dist/player/v2.4.1/asciinema-player.js"></script>
 </body>
 </html>
