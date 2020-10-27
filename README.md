@@ -2,8 +2,14 @@
 ![Development Status](https://img.shields.io/badge/Under-Development-red)
 [![Say Thanks](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/architdwivedi.off%40gmail.com) [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## Usage
+## Test Run
+Execute `run.sh` shell script to test run the project.
+```bash
+bash run.sh
 ```
+
+## Usage
+```shell
 usage: zmsai [-h] [--path [PATH]] [--topics [TOPICS]] [--nwords [NWORDS]] [--distro [DISTRO]] task
 
 positional arguments:
@@ -14,16 +20,17 @@ optional arguments:
   --path [PATH], -p [PATH]
                         Provide directory of text files. [with : 'run'] [default : './custom']
   --topics [TOPICS], -t [TOPICS]
-                        Provide directory of text files. [with : 'run'] [default : 4]
+                        How many topics do youb expect? [with : 'run'] [default : 'number of docs']
   --nwords [NWORDS], -w [NWORDS]
                         How many words per topic/doc do you want to display? [with : 'display'] [default : 5]
   --distro [DISTRO], -d [DISTRO]
                         What distributions do you want to display? [with : 'display'] [default : all] [values : 'dt', 'tw', 'dw', 'voc']
     
 ```
+
 ## Dependecy Graph
 
-```
+```shell
 attrs==20.2.0
   - pytest==6.1.1 [requires: attrs>=17.4.0]
 iniconfig==1.1.1
@@ -55,31 +62,4 @@ threadpoolctl==2.1.0
 toml==0.10.1
   - pytest==6.1.1 [requires: toml]
 wheel==0.34.2
-```
-## Test the project
-```
-# set up the dependecies
-pip3 install pipenv
-pipenv install --dev
-
-# discover topics
-pipenv run python3 zmsai run
-
-# delete the metadata stored in `meta.zms`
-pipenv run python3 zmsai delete
-
-# display all distributions at once
-pipenv run python3 zmsai display --distro all
-
-# display topic-word distributions
-pipenv run python3 zmsai display --distro tw
-
-# display doc-word distributions
-pipenv run python3 zmsai display --distro dw
-
-# display doc-topic distributions
-pipenv run python3 zmsai display --distro dt
-
-# display vocabulary
-pipenv run python3 zmsai display -d vocab
 ```

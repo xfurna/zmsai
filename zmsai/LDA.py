@@ -60,7 +60,7 @@ class heuristics:
         from numpy import zeros as npz
 
         print("===========================")
-        print("DOC VOCABULARY DISTRIBUTION")
+        print("CORPUS VOCABULARY DISTRIBUTION")
         print("===========================")
         message = "Words\t\tCount"
 
@@ -68,7 +68,7 @@ class heuristics:
         total_counts = npz(len(words))
         for t in self.vector:
             total_counts+=t.toarray()[0]
-        
+
         count_dict = (zip(words, total_counts))
         count_dict = sorted(count_dict, key=lambda x:x[1], reverse=True)[0:nWords]
         print_list(count_dict, message)
