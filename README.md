@@ -2,6 +2,8 @@
 ![Development Status](https://img.shields.io/badge/Under-Development-red)
 [![Say Thanks](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/architdwivedi.off%40gmail.com) [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+A command line utility for topic discovery and doc-linking within the Zettelkasten using AI approaches.
+
 ## Test Run
 Execute `run.sh` shell script to test run the project.
 ```bash
