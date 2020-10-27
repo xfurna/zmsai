@@ -9,11 +9,13 @@ import pickle as pkl
 import os
 
 import warnings
+
 warnings.filterwarnings("ignore")
+
 
 def main():
     args = argparse.ArgumentParser()
-    args.add_argument("task", nargs="?", default='run', help=base.helpTask)
+    args.add_argument("task", nargs="?", default="run", help=base.helpTask)
     args.add_argument("--path", "-p", nargs="?", default=base.path, help=base.helpPath)
     args.add_argument(
         "--topics", "-t", nargs="?", default=base.numberTopics, help=base.helpTopics
@@ -42,7 +44,9 @@ def main():
             choice = input(base.choice)
             if choice == "y":
                 print(base.run)
-                distributions = heuristics(path=pargs.path, numberTopics=int(pargs.topics))
+                distributions = heuristics(
+                    path=pargs.path, numberTopics=int(pargs.topics)
+                )
                 distributions.save()
             else:
                 print("Taking it as a no.")
@@ -50,15 +54,15 @@ def main():
         pickling_on = open("meta.zms", "rb")
         distributions = pkl.load(pickling_on)
 
-        if pargs.distro == 'dt':
+        if pargs.distro == "dt":
             distributions.get_doc_topic_distrib(base.docs)
-        elif pargs.distro == 'tw':
+        elif pargs.distro == "tw":
             distributions.get_topic_word_distrib(int(pargs.nwords))
-        elif pargs.distro == 'dw':
+        elif pargs.distro == "dw":
             distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
-        elif pargs.distro == 'voc':
+        elif pargs.distro == "voc":
             distributions.get_vocabulary(base.docs, int(pargs.nwords))
-        elif pargs.distro == 'all':
+        elif pargs.distro == "all":
             distributions.get_doc_topic_distrib(base.docs)
             distributions.get_topic_word_distrib(int(pargs.nwords))
             distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
@@ -76,13 +80,14 @@ def main():
         pass
 
     elif pargs.task == "man":
-        USAGE = open("MAN.txt",'r')
+        USAGE = open("MAN.txt", "r")
         print(USAGE.read())
         pass
 
     else:
         print("[Invalid argument]")
         pass
+
 
 if __name__ == "__main__":
     main()

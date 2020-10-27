@@ -4,7 +4,9 @@ from utils import print_list
 from utils import padding
 
 import warnings
+
 warnings.simplefilter("ignore", DeprecationWarning)
+
 
 class heuristics:
     def __init__(self, path, numberTopics):
@@ -67,10 +69,10 @@ class heuristics:
         words = self.vectorizer.get_feature_names()
         total_counts = npz(len(words))
         for t in self.vector:
-            total_counts+=t.toarray()[0]
+            total_counts += t.toarray()[0]
 
-        count_dict = (zip(words, total_counts))
-        count_dict = sorted(count_dict, key=lambda x:x[1], reverse=True)[0:nWords]
+        count_dict = zip(words, total_counts)
+        count_dict = sorted(count_dict, key=lambda x: x[1], reverse=True)[0:nWords]
         print_list(count_dict, message)
         print("\n")
         return self.vectorizer.vocabulary_

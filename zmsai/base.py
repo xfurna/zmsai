@@ -4,9 +4,7 @@ path = "./custom"
 numberTopics, docs = countFiles(DIR=path)
 nWords = 5
 defaultDistro = "all"
-helpTask = (
-    "Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man']"
-)
+helpTask = "Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man']"
 
 helpTopics = (
     "How many topics do you expect? [with : 'run'] [default : "
