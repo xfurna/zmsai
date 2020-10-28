@@ -10,7 +10,7 @@ Execute `run.sh` shell script to test run the project.
 bash run.sh
 ```
 
-## Usage
+## Manual
 ```shell
 usage: zmsai [-h] [--path [PATH]] [--topics [TOPICS]] [--nwords [NWORDS]] [--distro [DISTRO]] task
 
@@ -30,7 +30,7 @@ optional arguments:
     
 ```
 
-## Dependecy Graph
+## Dependency Graph
 
 ```shell
 attrs==20.2.0
