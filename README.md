@@ -22,7 +22,7 @@ optional arguments:
   --path [PATH], -p [PATH]
                         Provide directory of text files. [with : 'run'] [default : './custom']
   --topics [TOPICS], -t [TOPICS]
-                        How many topics do youb expect? [with : 'run'] [default : 'number of docs']
+                        How many topics do you expect? [with : 'run'] [default : 'number of docs']
   --nwords [NWORDS], -w [NWORDS]
                         How many words per topic/doc do you want to display? [with : 'display'] [default : 5]
   --distro [DISTRO], -d [DISTRO]
