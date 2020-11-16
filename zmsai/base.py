@@ -1,7 +1,7 @@
 from zmsai.utils import countFiles
 
 path = "./custom"
-numberTopics, docs = countFiles(DIR=path)
+DefnumberTopics, docs = countFiles(DIR=path)
 nWords = 5
 defaultDistro = "all"
 helpTask = "Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man', 'test']"
