@@ -1,8 +1,5 @@
 <div align="center">
-    <h1>
-        CoVup Setu
-    </h1>
-    <img width="250" src="./logo.png" alt="ZmsAi" />
+    <img width="600" src="./logo.png" alt="ZmsAi" />
     <p>
         <i>Get pandemic related stats of your district first thing in the morning.</i>
     </p>
