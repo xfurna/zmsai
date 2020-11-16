@@ -1,4 +1,4 @@
-from utils import countFiles
+from zmsai.utils import countFiles
 
 path = "./custom"
 numberTopics, defdocs = countFiles(DIR=path)
@@ -7,9 +7,7 @@ defaultDistro = "all"
 helpTask = "Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man', 'test']"
 
 helpTopics = (
-    "How many topics do you expect? [with : 'run'] [default : "
-    + "number of docs"
-    + "]"
+    "How many topics do you expect? [with : 'run'] [default : " + "number of docs" + "]"
 )
 helpnWords = (
     "How many words per topic/doc do you want to display? [with : 'display'] [default : "

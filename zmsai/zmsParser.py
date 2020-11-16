@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import argparse
-import base
-import utils
-from LDA import heuristics
-from readData import read_txt
+import zmsai.base
+import zmsai.utils
+from zmsai.LDA import heuristics
+from zmsai.readData import read_txt
 import pickle as pkl
 
 import os
@@ -97,13 +97,15 @@ def main():
     else:
         print("[Invalid argument]")
         pass
-    
+
+
 def countFiles(DIR):
     from os import listdir
 
     lsdir = listdir(DIR)
     count = len(lsdir)
     return count, lsdir
+
 
 if __name__ == "__main__":
     main()
