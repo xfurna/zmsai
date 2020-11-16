@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import argparse
-import base
-import utils
-from LDA import heuristics
-from readData import read_txt
+import zmsai.base
+import zmsai.utils
+from zmsai.LDA import heuristics
+from zmsai.readData import read_txt
 import pickle as pkl
 
 import os
@@ -35,6 +35,16 @@ def main():
             os.remove("meta.zms")
         distributions = heuristics(path=pargs.path, numberTopics=int(pargs.topics))
         distributions.save()
+        pass
+    elif pargs.task == "test":
+        print(base.run)
+        if os.path.exists("meta.zms"):
+            os.remove("meta.zms")
+        distributions = heuristics(path=pargs.path, numberTopics=int(pargs.topics))
+        distributions.get_doc_topic_distrib(base.docs)
+        distributions.get_topic_word_distrib(int(pargs.nwords))
+        distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
+        distributions.get_vocabulary(base.docs, int(pargs.nwords))
         pass
 
     elif pargs.task == "display":

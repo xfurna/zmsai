@@ -18,10 +18,10 @@ bash run.sh
 
 ## Manual
 ```shell
-usage: zmsai [-h] [--path [PATH]] [--topics [TOPICS]] [--nwords [NWORDS]] [--distro [DISTRO]] task
+usage: zmsai [-h] [--path [PATH]] [--topics [TOPICS]] [--nwords [NWORDS]] [--distro [DISTRO]] [task]
 
 positional arguments:
-  task                  Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display']
+  task                  Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man', 'test']
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -32,8 +32,7 @@ optional arguments:
   --nwords [NWORDS], -w [NWORDS]
                         How many words per topic/doc do you want to display? [with : 'display'] [default : 5]
   --distro [DISTRO], -d [DISTRO]
-                        What distributions do you want to display? [with : 'display'] [default : all] [values : 'dt', 'tw', 'dw', 'voc']
-    
+                        What distributions do you want to display? [with : 'display'] [default : all] [values : 'dt', 'tw', 'dw', 'voc', 'all']
 ```
 
 ## Dependency Graph
