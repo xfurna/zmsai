@@ -28,7 +28,7 @@ def main():
     )
 
     pargs = args.parse_args()
-
+    ndoc, docs = countFiles(pargs.path)
     if pargs.task == "run":
         print(base.run)
         if os.path.exists("meta.zms"):
@@ -41,10 +41,10 @@ def main():
         if os.path.exists("meta.zms"):
             os.remove("meta.zms")
         distributions = heuristics(path=pargs.path, numberTopics=int(pargs.topics))
-        distributions.get_doc_topic_distrib(base.docs)
+        distributions.get_doc_topic_distrib(docs)
         distributions.get_topic_word_distrib(int(pargs.nwords))
-        distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
-        distributions.get_vocabulary(base.docs, int(pargs.nwords))
+        distributions.get_doc_word_distrib(docs, int(pargs.nwords))
+        distributions.get_vocabulary(docs, int(pargs.nwords))
         pass
 
     elif pargs.task == "display":
@@ -65,18 +65,18 @@ def main():
         distributions = pkl.load(pickling_on)
 
         if pargs.distro == "dt":
-            distributions.get_doc_topic_distrib(base.docs)
+            distributions.get_doc_topic_distrib(docs)
         elif pargs.distro == "tw":
             distributions.get_topic_word_distrib(int(pargs.nwords))
         elif pargs.distro == "dw":
-            distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
+            distributions.get_doc_word_distrib(docs, int(pargs.nwords))
         elif pargs.distro == "voc":
-            distributions.get_vocabulary(base.docs, int(pargs.nwords))
+            distributions.get_vocabulary(docs, int(pargs.nwords))
         elif pargs.distro == "all":
-            distributions.get_doc_topic_distrib(base.docs)
+            distributions.get_doc_topic_distrib(docs)
             distributions.get_topic_word_distrib(int(pargs.nwords))
-            distributions.get_doc_word_distrib(base.docs, int(pargs.nwords))
-            distributions.get_vocabulary(base.docs, int(pargs.nwords))
+            distributions.get_doc_word_distrib(docs, int(pargs.nwords))
+            distributions.get_vocabulary(docs, int(pargs.nwords))
 
         pass
 
@@ -97,7 +97,13 @@ def main():
     else:
         print("[Invalid argument]")
         pass
+    
+def countFiles(DIR):
+    from os import listdir
 
+    lsdir = listdir(DIR)
+    count = len(lsdir)
+    return count, lsdir
 
 if __name__ == "__main__":
     main()
