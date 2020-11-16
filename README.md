@@ -2,9 +2,8 @@
     <img width="600" src="./logo.png" alt="ZmsAi" />
 </div>
 
-# Ai solution for Luhmann's Zettelkasten
+![Development Status](https://img.shields.io/badge/Under-Development-red) ![py3.8](https://camo.githubusercontent.com/f0cf3d008a2671b0a60a7bb65cbcd1adfdfc93f5e1d54032d3c64bad5a2f8a25/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d332e382d626c75652e737667) ![GPLv3](https://camo.githubusercontent.com/400c4e52df43f6a0ab8a89b74b1a78d1a64da56a7848b9110c9d2991bb7c3105/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d47504c76332d626c75652e737667)
 
-![Development Status](https://img.shields.io/badge/Under-Development-red)
 [![Say Thanks](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/architdwivedi.off%40gmail.com) [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 A command line utility for topic discovery and doc-linking within the Zettelkasten using AI approaches.
