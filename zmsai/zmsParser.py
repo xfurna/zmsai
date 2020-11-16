@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import argparse
-import zmsai.base
-import zmsai.utils
+import zmsai.base as base
 from zmsai.LDA import heuristics
 from zmsai.readData import read_txt
 import pickle as pkl

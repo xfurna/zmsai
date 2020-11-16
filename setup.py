@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zmsai",
-    version="0.0.3",
+    version="0.0.4",
     author="evi1haxor",
     author_email="architdwivedi.off@gmail.com",
     description="Ai solution for Luhmann's Zettelkasten",
