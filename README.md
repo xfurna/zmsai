@@ -1,3 +1,12 @@
+<div align="center">
+    <h1>
+        CoVup Setu
+    </h1>
+    <img width="250" src="./logo.png" alt="ZmsAi" />
+    <p>
+        <i>Get pandemic related stats of your district first thing in the morning.</i>
+    </p>
+</div>
 # Ai solution for Luhmann's Zettelkasten
 ![Development Status](https://img.shields.io/badge/Under-Development-red)
 [![Say Thanks](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/architdwivedi.off%40gmail.com) [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
