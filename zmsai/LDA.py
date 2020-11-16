@@ -1,7 +1,7 @@
-from zmsai.readData import read_txt
-from zmsai.utils import print_topics
-from zmsai.utils import print_list
-from zmsai.utils import padding
+from readData import read_txt
+from utils import print_topics
+from utils import print_list
+from utils import padding
 
 import warnings
 

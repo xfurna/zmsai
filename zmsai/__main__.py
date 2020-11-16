@@ -1,4 +1,4 @@
-import zmsParser
+from zmsParser import main
 
 if __name__ == "__main__":
-    zmsParser.main()
+    main()

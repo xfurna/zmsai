@@ -1,4 +1,4 @@
-from zmsai.utils import countFiles
+from utils import countFiles
 
 path = "./custom"
 numberTopics, defdocs = countFiles(DIR=path)

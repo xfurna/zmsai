@@ -1,5 +1,5 @@
 from os import walk, listdir
-from zmsai.utils import series_to_list as stl
+from utils import series_to_list as stl
 
 
 def read_txt(path="./custom"):
