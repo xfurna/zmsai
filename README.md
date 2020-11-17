@@ -70,7 +70,7 @@ This will take default value of 5 for `nwords` argument.
 usage: zmsai [-h] [--path [PATH]] [--topics [TOPICS]] [--nwords [NWORDS]] [--distro [DISTRO]] [task]
 
 positional arguments:
-  task                  Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man', 'test']
+  task                  Provide task to perform [default : 'run'] [values : 'run', 'delete', 'display', 'man', 'test', 'fix-ubuntu']
 
 optional arguments:
   -h, --help            show this help message and exit

@@ -5,8 +5,12 @@ def series_to_list(obj):
 def countFiles(DIR):
     from os import listdir
 
-    lsdir = listdir(DIR)
-    count = len(lsdir)
+    try:
+        lsdir = listdir(DIR)
+        count = len(lsdir)
+    except:
+        count, lsdir = 0, 0
+
     return count, lsdir
 
 

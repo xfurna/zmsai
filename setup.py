@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zmsai",
-    version="0.1.1",
+    version="0.1.4.2",
     author="evi1haxor",
     author_email="architdwivedi.off@gmail.com",
     description="Ai solution for Luhmann's Zettelkasten",
@@ -21,5 +21,6 @@ setuptools.setup(
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
+    install_requires=["scikit-learn"],
     entry_points={"console_scripts": ["zmsai=zmsai.__main__:main",]},
 )

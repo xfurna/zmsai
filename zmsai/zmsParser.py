@@ -27,7 +27,7 @@ def main():
     )
 
     pargs = args.parse_args()
-    ndoc, docs = countFiles(pargs.path)
+
     if pargs.task == "run":
         print(base.run)
         if os.path.exists("meta.zms"):
@@ -35,6 +35,11 @@ def main():
         distributions = heuristics(path=pargs.path, numberTopics=int(pargs.topics))
         distributions.save()
         pass
+
+    elif pargs.task == "fix-ubuntu":
+        os.system("sudo pip3 install -U scikit-learn")
+        pass
+
     elif pargs.task == "test":
         print(base.run)
         if os.path.exists("meta.zms"):
