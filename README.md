@@ -10,11 +10,60 @@
 
 A command line utility for topic discovery and doc-linking within the Zettelkasten using AI approaches.
 
-## Test Run
-Execute `run.sh` shell script to test run the project.
-```bash
-bash run.sh
+## Installation
+Install `zmsai` by executing the following command-
+```shell
+$ pip install zmsai
 ```
+
+## Test Run
+Test run using dummy docs (see `./custom`)
+```shell
+$ zmsai test
+```
+
+## Usage
+To learn `n` topics in your Zettelkasten at `/path/to/your/zettelkasten/`-
+```shell
+$ zmsai run -t n -p "/path/to/your/zettelkasten/"
+```
+This will create a metadata file `meta.zms` storing all the distributions exhibited by the documents in your Zettelkasten.
+```shell
+[Running the model] it may take a while. Hang tight!
+[Data stored] ... kb
+``` 
+You can delete your metadata file by executing-
+```shell
+$ zmsai delete
+```
+
+These learnt distributions can be printed using `zmsai display`. You can pass an additional argument `-w`, the number of top most occuring words that you want to print from the distributions involing words.
+
+To display doc-topic distribution-
+```shell
+$ zmsai display -d dt
+```
+To display topic-word distribution-
+```shell
+$ zmsai display -w n -d tw
+```
+To display doc-word distribution-
+```shell
+$ zmsai display -w n -d dw
+```
+To display vocabulary-
+```shell
+$ zmsai display -w n -d voc
+```
+To display all distributions at once-
+```shell
+$ zmsai display -w n -d all
+```
+or simply
+```shell
+$ zmsai display
+```
+This will take default value of 5 for `nwords` argument.
 
 ## Manual
 ```shell
@@ -70,3 +119,8 @@ toml==0.10.1
   - pytest==6.1.1 [requires: toml]
 wheel==0.34.2
 ```
+## Contribution
+Are welcome.
+
+## License
+[GNU General Public License v3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0)
