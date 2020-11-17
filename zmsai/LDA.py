@@ -2,6 +2,7 @@ from zmsai.readData import read_txt
 from zmsai.utils import print_topics
 from zmsai.utils import print_list
 from zmsai.utils import padding
+from zmsai.utils import countFiles
 
 import warnings
 
@@ -11,6 +12,7 @@ warnings.simplefilter("ignore", DeprecationWarning)
 class heuristics:
     def __init__(self, path, numberTopics):
         data = read_txt(path)
+        self.ndocs, self.docs = countFiles(path)
         self.vector, self.vectorizer = self.get_feature_space(data)
         self.transform, self.lda = self.LDA_transform(numberTopics)
 
@@ -19,7 +21,7 @@ class heuristics:
         print_topics(self.lda, self.vectorizer, nWords)
         return topic_word
 
-    def get_doc_word_distrib(self, docs, nWords):
+    def get_doc_word_distrib(self, nWords):
         print("=====================")
         print("DOC-WORD DISTRIBUTION")
         print("=====================")
@@ -29,9 +31,9 @@ class heuristics:
         words = self.vectorizer.get_feature_names()
         total_counts = np.zeros(len(words))
         for i, t in enumerate(self.vector):
-            padding(len("* " + docs[i]), "-")
-            print("*", docs[i])
-            padding(len("* " + docs[i]), "-")
+            padding(len("* " + self.docs[i]), "-")
+            print("*", self.docs[i])
+            padding(len("* " + self.docs[i]), "-")
             total_counts = t.toarray()[0]
             count_dict = zip(words, total_counts)
             count_dict = sorted(count_dict, key=lambda x: x[1], reverse=True)[0:nWords]
@@ -39,7 +41,7 @@ class heuristics:
             print("\n")
         return count_dict
 
-    def get_doc_topic_distrib(self, docs):
+    def get_doc_topic_distrib(self):
         print("======================")
         print("DOC-TOPIC DISTRIBUTION")
         print("======================")
@@ -52,13 +54,13 @@ class heuristics:
         for n in range(self.transform.shape[0]):
             topic_most_pr = self.transform[n].argmax()
 
-            ls = [" "] * (nPad - len(docs[n]))
+            ls = [" "] * (nPad - len(self.docs[n]))
             pad = jstr.join(ls)
 
-            print(docs[n], pad, topic_most_pr + 1)
+            print(self.docs[n], pad, topic_most_pr + 1)
         print("\n")
 
-    def get_vocabulary(self, docs, nWords):
+    def get_vocabulary(self, nWords):
         from numpy import zeros as npz
 
         print("===========================")

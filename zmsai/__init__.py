@@ -4,8 +4,8 @@
 # from . import base
 import zmsai
 
-name = "zms-ai"
-__version__ = "0.0.4"
+name = "zmsai"
+__version__ = "0.1.1"
 
 
 if __name__ == "__main__":

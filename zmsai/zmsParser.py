@@ -11,7 +11,6 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-
 def main():
     args = argparse.ArgumentParser()
     args.add_argument("task", nargs="?", default="run", help=base.helpTask)
@@ -40,10 +39,10 @@ def main():
         if os.path.exists("meta.zms"):
             os.remove("meta.zms")
         distributions = heuristics(path=pargs.path, numberTopics=int(pargs.topics))
-        distributions.get_doc_topic_distrib(docs)
+        distributions.get_doc_topic_distrib()
         distributions.get_topic_word_distrib(int(pargs.nwords))
-        distributions.get_doc_word_distrib(docs, int(pargs.nwords))
-        distributions.get_vocabulary(docs, int(pargs.nwords))
+        distributions.get_doc_word_distrib(int(pargs.nwords))
+        distributions.get_vocabulary(int(pargs.nwords))
         pass
 
     elif pargs.task == "display":
@@ -52,9 +51,10 @@ def main():
         else:
             choice = input(base.choice)
             if choice == "y":
+                path=input("Provide path.")
                 print(base.run)
                 distributions = heuristics(
-                    path=pargs.path, numberTopics=int(pargs.topics)
+                    path=path, numberTopics=int(pargs.topics)
                 )
                 distributions.save()
             else:
@@ -64,18 +64,18 @@ def main():
         distributions = pkl.load(pickling_on)
 
         if pargs.distro == "dt":
-            distributions.get_doc_topic_distrib(docs)
+            distributions.get_doc_topic_distrib()
         elif pargs.distro == "tw":
             distributions.get_topic_word_distrib(int(pargs.nwords))
         elif pargs.distro == "dw":
-            distributions.get_doc_word_distrib(docs, int(pargs.nwords))
+            distributions.get_doc_word_distrib(int(pargs.nwords))
         elif pargs.distro == "voc":
-            distributions.get_vocabulary(docs, int(pargs.nwords))
+            distributions.get_vocabulary(int(pargs.nwords))
         elif pargs.distro == "all":
-            distributions.get_doc_topic_distrib(docs)
+            distributions.get_doc_topic_distrib()
             distributions.get_topic_word_distrib(int(pargs.nwords))
-            distributions.get_doc_word_distrib(docs, int(pargs.nwords))
-            distributions.get_vocabulary(docs, int(pargs.nwords))
+            distributions.get_doc_word_distrib(int(pargs.nwords))
+            distributions.get_vocabulary(int(pargs.nwords))
 
         pass
 
