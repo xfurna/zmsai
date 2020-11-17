@@ -11,6 +11,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
+
 def main():
     args = argparse.ArgumentParser()
     args.add_argument("task", nargs="?", default="run", help=base.helpTask)
@@ -51,11 +52,9 @@ def main():
         else:
             choice = input(base.choice)
             if choice == "y":
-                path=input("Provide path.")
+                path = input("Provide path.")
                 print(base.run)
-                distributions = heuristics(
-                    path=path, numberTopics=int(pargs.topics)
-                )
+                distributions = heuristics(path=path, numberTopics=int(pargs.topics))
                 distributions.save()
             else:
                 print("Taking it as a no.")
