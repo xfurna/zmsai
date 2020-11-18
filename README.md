@@ -13,7 +13,7 @@ A command line utility for topic discovery and doc-linking within the Zettelkast
 ## Installation
 Install `zmsai` by executing the following command-
 ```shell
-$ pip install zmsai
+$ pip3 install zmsai
 ```
 
 ## Test Run
@@ -64,6 +64,18 @@ or simply
 $ zmsai display
 ```
 This will take default value of 5 for `nwords` argument.
+
+## Troubleshooting
+If you get `ModuleNotFoundError: No module named 'sklearn'` error with `display`, try installing `scikit-learn` manually.
+```shell
+$ sudo pip3 install -U scikit-learn
+```
+Alternatively, if you're on ubuntu, try executing the following command-
+```shell
+$ zmsai fix-ubuntu
+```
+
+Feel free to raise an issue if you feel stuck.
 
 ## Manual
 ```shell
