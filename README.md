@@ -21,6 +21,7 @@ Test run using dummy docs (see `./custom`)
 ```shell
 $ zmsai test
 ```
+It will work only if you install the project from the source code.
 
 ## Usage
 To learn `n` topics in your Zettelkasten at `/path/to/your/zettelkasten/`-
