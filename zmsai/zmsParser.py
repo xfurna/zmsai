@@ -36,10 +36,6 @@ def main():
         distributions.save()
         pass
 
-    elif pargs.task == "fix-ubuntu":
-        os.system("sudo pip3 install -U scikit-learn")
-        pass
-
     elif pargs.task == "test":
         print(base.run)
         if os.path.exists("meta.zms"):
@@ -97,18 +93,13 @@ def main():
         print(USAGE.read())
         pass
 
+    elif pargs.task == "fix-ubuntu":
+        os.system("sudo pip3 install -U scikit-learn")
+        pass
+
     else:
         print("[Invalid argument]")
         pass
-
-
-def countFiles(DIR):
-    from os import listdir
-
-    lsdir = listdir(DIR)
-    count = len(lsdir)
-    return count, lsdir
-
 
 if __name__ == "__main__":
     main()
